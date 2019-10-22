@@ -186,7 +186,7 @@ for line in tailer.follow(open(log_file)):
             gamemode = '5CP'
         elif current_map == 'cp_sunshine_event':
             map = 'Sinshine'
-            gamemode == '5CP'
+            gamemode = '5CP'
         elif current_map == 'cp_snakewater_final1':
             map = 'Snakewater'
             gamemode = '5CP'
@@ -353,7 +353,7 @@ for line in tailer.follow(open(log_file)):
             gamemode = 'King of the Hill'
         elif current_map == 'koth_bagel_event':
             map = 'Cauldron'
-            gamemode == 'King of the Hill'
+            gamemode = 'King of the Hill'
         elif current_map == 'koth_viaduct_event':
             map = 'Eyeaduct'
             gamemode = 'King of the Hill'
