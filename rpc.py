@@ -24,7 +24,7 @@ def msg(text):
 
 
 # Grab the log file from tf_path.txt. Encoding is utterly scuffed, for some reason. Perhaps it's just my machine...
-f = open('tf_path.txt', 'r', encoding="ISO-8859-15")
+f = open('tf_path.txt', 'r', encoding='UTF8')
 tf_folder = f.read()
 log_file = os.path.join(tf_folder.rstrip('\n'), 'tf', 'console.log')
 f.close()
@@ -50,7 +50,7 @@ def update(details, state, image):
 update(details, state, image)
 
 # Tail the log file
-for line in tailer.follow(open(log_file)):
+for line in tailer.follow(open(log_file, encoding='UTF8')):
     #print(line)
     # Uncomment the line above (ie, remove the '#') to output all information. This may decrease performance,
     # so it is left disabled by default.

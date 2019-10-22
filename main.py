@@ -5,9 +5,9 @@
 #
 
 
-import tkinter
-import easygui as gui
 import os
+
+import easygui as gui
 
 tf_folder = ''
 
@@ -42,7 +42,7 @@ if not os.path.isfile('tf_path.txt'):
             msg('Please open your Team Fortress 2 folder. It should contain a folder named "tf" and a folder named "hl2".')
             tf_folder = gui.diropenbox()
 
-    f = open('tf_path.txt', 'w+')
+    f = open('tf_path.txt', 'w+', encoding='UTF8')
     f.write(tf_folder)
     f.close()
 
