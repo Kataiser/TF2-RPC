@@ -25,7 +25,7 @@ def msg(text):
 # Grab the log file from tf_path.txt. Encoding is utterly scuffed, for some reason. Perhaps it's just my machine...
 f = open('tf_path.txt', 'r', encoding="ISO-8859-15")
 tf_folder = f.read()
-log_file = tf_folder.rstrip('\n') + 'tf/console.log'
+log_file = os.path.join(tf_folder.rstrip('\n'), 'tf', 'console.log')
 f.close()
 
 # Check if the log file actually exists.
